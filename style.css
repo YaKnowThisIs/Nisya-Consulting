@@ -15,15 +15,8 @@ header {
 }
 
 header logo img {
-   width: 10vw;
+   width: 30vw;
    height: auto;
-}
-
-header nisya {
-   font-family: 'Archivo Black', sans-serif;
-   font-weight: 100;
-   font-size: clamp(1rem, 1.5vw, 1.7vw);
-   color: #FFFFFF;
 }
 
  /*header links*/
