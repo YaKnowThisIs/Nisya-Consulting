@@ -1,113 +1,101 @@
 body {
-   margin: 0;
-   padding: 0;
- }
-
-/*_________________________________header_________________________________*/
-header {
-   width: 100%;
-   background-color: #09253D;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   box-sizing: border-box;
-   line-height: 0.1;
-}
-
-header logo img {
-   width: 30vw;
-   height: auto;
-   margin: 0.5vw;
-   margin-left: 1vw;
-   margin-right: 1vw;
-}
-
- /*header links*/
-header nav a {
-   text-decoration: none;
-   font-family: 'Montserrat', sans-serif;
-   color: #FFFFFF;
-   padding: 5px 8px 20px;
-   font-size: clamp(12px, 16px, 32px);
-   margin-left: 1vw;
-   margin-right: 1vw;
-}
-
- /*_________________________________main_________________________________*/
-main {
-   box-sizing: border-box;
-   margin-left: 20vw;
-   margin-right: 20vw;
-   display: flex;
-   align-items: center;
+    margin: 0;
+    padding: 0;
 }
  
- /*content*/
- .content h1 {
-   text-align: center;
-   font-family: 'Archivo Black', sans-serif;
-   font-weight: 700;
-   font-size: clamp(2rem, 4vw, 3rem);
-   color: #09253D;
+/*_________________________________header_________________________________*/
+header {
+    width: 100%;
+    background-color: #09253D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    line-height: 0.1;
 }
+ 
+header .logo img {
+    width: 30vw;
+    height: auto;
+    margin: 0.5vw 1vw;
+}
+ 
+/*header links*/
+header nav a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    padding: 5px 8px 20px;
+    font-size: clamp(12px, 16px, 32px);
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+ 
+/*_________________________________main_________________________________*/
+main {
+    box-sizing: border-box;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    display: block;
+    padding-bottom: 100px;
+}
+  
 
- .content h2 {
+h1 {
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #09253D;
+}
+ 
+h2 {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: #09253D;
- }
-
- .content h3 {
-   text-align: center;
-   font-family: 'Montserrat', sans-serif;
-   color: #42C5A5;
 }
-
- .content {
-   flex: 70%;
-   padding: 20px;
-   text-align: center;
-   font-family: 'Montserrat', sans-serif;
-   color: #929292;
-   text-align: justify;
-   margin-bottom: 50px;
+ 
+h3 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #42C5A5;
 }
-
-main logo img {
-   width: 15vw;
-   height: auto;
-   display: block;
-   margin: 0 auto;
+ 
+section {
+    flex: 70%;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #929292;
+    text-align: justify;
 }
-
- /*_________________________________footer_________________________________*/
- footer {
-   width: 100%;
-   background-color: #42C5A5;
-   align-items: center;
-   justify-content: space-between;
-   box-sizing: border-box;
-   position: fixed;
-   bottom: 0;
-   margin-top: 80px;
-   line-height: 0.1;
-   padding: 0px;
+ 
+/*_________________________________footer_________________________________*/
+footer {
+    width: 100%;
+    background-color: #42C5A5;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    padding: 0px;
+    align-items: center;
+    line-height: 0.1;
 }
-
+ 
 .infos {
-   flex: 70%;
-   text-align: center;
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 300;
-   color: #FFFFFF;
-   text-align: center;
+    flex: 70%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
 }
-
+ 
 .hébergement {
-   flex: 70%;
-   text-align: center;
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 100;
-   color: #FFFFFF;
-   text-align: center;
+    flex: 70%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    color: #FFFFFF;
+    text-align: center;
 }
