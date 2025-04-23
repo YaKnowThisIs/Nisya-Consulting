@@ -106,18 +106,21 @@ h1 {
     font-weight: 700;
     font-size: clamp(2rem, 4vw, 3rem);
     color: #09253D;
+    padding-top: 5vw;
 }
  
 h2 {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: #09253D;
+    padding-top: 5vw;
 }
  
 h3 {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: #42C5A5;
+    padding-top: 5vw;
 }
  
 section {
@@ -134,11 +137,10 @@ footer {
     width: 100%;
     background-color: #42C5A5;
     box-sizing: border-box;
-    position: fixed;
+    position: 0;
     bottom: 0;
-    padding: 0px;
+    padding: 1px;
     align-items: center;
-    line-height: 0.1;
     z-index: 1000;
 }
  
@@ -149,6 +151,7 @@ footer {
     font-weight: 300;
     color: #FFFFFF;
     text-align: center;
+    line-height: 0.1;
 }
  
 .hébergement {
