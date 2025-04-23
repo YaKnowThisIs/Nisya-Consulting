@@ -11,96 +11,17 @@ header {
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    line-height: 0.1;
+    position: fixed;
+    line-height: 0.1em;
+    padding: 0.3em 1em;
+    z-index: 1000;
 }
  
 header .logo img {
-    width: 30vw;
+    width: 20vw;
     height: auto;
-    margin: 0.5vw 1vw;
+    margin: 0;
 }
- 
-/*header links*/
-header nav a {
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
-    padding: 5px 8px 20px;
-    font-size: clamp(12px, 16px, 32px);
-    margin-left: 1vw;
-    margin-right: 1vw;
-}
- 
-/*_________________________________main_________________________________*/
-main {
-    box-sizing: border-box;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    display: block;
-    padding-bottom: 100px;
-}
-  
-
-h1 {
-    text-align: center;
-    font-family: 'Archivo Black', sans-serif;
-    font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: #09253D;
-}
- 
-h2 {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    color: #09253D;
-}
- 
-h3 {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    color: #42C5A5;
-}
- 
-section {
-    flex: 70%;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    color: #929292;
-    text-align: justify;
-}
- 
-/*_________________________________footer_________________________________*/
-footer {
-    width: 100%;
-    background-color: #42C5A5;
-    box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
-    padding: 0px;
-    align-items: center;
-    line-height: 0.1;
-}
- 
-.infos {
-    flex: 70%;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    color: #FFFFFF;
-    text-align: center;
-}
- 
-.hébergement {
-    flex: 70%;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-/* ---------- MENU HAMBURGER RESPONSIVE ---------- */
 
 /* Cacher la case à cocher */
 #menu-toggle {
@@ -140,14 +61,19 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* ________________________ Responsive ________________________ */
-@media (max-width: 1500px) {
+/* ---------- MENU BURGER RESPONSIVE ---------- */
+@media (max-width: 1200px) {
   /* Affiche burger et cache menu */
   .menu-icon {
     display: block;
     margin-left: auto;
   }
 
+  .menu-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  
   .menu {
     display: none;
     flex-direction: column;
@@ -162,12 +88,74 @@ footer {
 
   header {
     flex-wrap: wrap;
-    padding: 0.5em 1em;
-    align-items: center;
   }
+}
 
-  .logo img {
-    width: 40vw;
-    margin-bottom: 0.5em;
-  }
+/*_________________________________main_________________________________*/
+main {
+    box-sizing: border-box;
+    margin:  0vw 20vw 0vw 20vw;
+    display: block;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #09253D;
+}
+ 
+h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #09253D;
+}
+ 
+h3 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #42C5A5;
+}
+ 
+section {
+    flex: 70%;
+    padding: 1vw;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #929292;
+    text-align: justify;
+}
+ 
+/*_________________________________footer_________________________________*/
+footer {
+    width: 100%;
+    background-color: #42C5A5;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    padding: 0px;
+    align-items: center;
+    line-height: 0.1;
+    z-index: 1000;
+}
+ 
+.infos {
+    flex: 70%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+}
+ 
+.hébergement {
+    flex: 70%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    color: #FFFFFF;
+    text-align: center;
 }
