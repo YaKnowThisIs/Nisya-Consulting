@@ -141,7 +141,7 @@ footer {
 }
 
 /* ________________________ Responsive ________________________ */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   /* Affiche burger et cache menu */
   .menu-icon {
     display: block;
