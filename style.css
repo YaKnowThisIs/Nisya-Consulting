@@ -102,70 +102,72 @@ footer {
 
 /* ---------- MENU HAMBURGER RESPONSIVE ---------- */
 
-/* Bouton hamburger */
+/* Cacher la case à cocher */
+#menu-toggle {
+  display: none;
+}
+
+/* Icône burger */
 .menu-icon {
-    display: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    padding: 1rem;
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+/* Menu visible par défaut */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #FFFFFF;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  white-space: nowrap;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ________________________ Responsive ________________________ */
+@media (max-width: 800px) {
+  /* Affiche burger et cache menu */
+  .menu-icon {
+    display: block;
+    margin-left: auto;
   }
-  
-  #menu-toggle {
-    display: none;
-  }
-  
-  /* Menu navigation */
+
   .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #09253D;
+    align-items: center;
+  }
+
+  #menu-toggle:checked ~ .menu {
     display: flex;
+  }
+
+  header {
     flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
-    font-size: 1.1em;
     padding: 0.5em 1em;
-    white-space: nowrap;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    align-items: center;
   }
-  
-  .menu a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+
+  .logo img {
+    width: 40vw;
+    margin-bottom: 0.5em;
   }
-  
-  /* Responsive : activer le menu hamburger */
-  @media (max-width: 800px) {
-    .menu {
-      flex-direction: column;
-      width: 100%;
-      display: none;
-      background-color: #09253D;
-      align-items: center;
-    }
-  
-    #menu-toggle:checked + .menu-icon + .menu {
-      display: flex;
-    }
-  
-    .menu-icon {
-      display: block;
-      margin-left: auto;
-    }
-  
-    header {
-      flex-wrap: wrap;
-      padding: 0.5em 1em;
-    }
-  
-    .logo img {
-      width: 40vw;
-      margin-bottom: 0.5em;
-    }
-  }
-  
+}
