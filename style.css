@@ -106,21 +106,19 @@ h1 {
     font-weight: 700;
     font-size: clamp(2rem, 4vw, 3rem);
     color: #09253D;
-    padding-top: 5vw;
 }
  
 h2 {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: #09253D;
-    padding-top: 5vw;
+    paddingtop: 5vw;
 }
  
 h3 {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: #42C5A5;
-    padding-top: 5vw;
 }
  
 section {
@@ -131,7 +129,22 @@ section {
     color: #929292;
     text-align: justify;
 }
- 
+
+section {
+  padding: 2vw;
+  font-family: 'Montserrat', sans-serif;
+  color: #929292;
+  text-align: justify;
+}
+
+/* Texte en colonnes sur grands écrans */
+@media (min-width: 900px) {
+  section p {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+}
+
 /*_________________________________footer_________________________________*/
 footer {
     width: 100%;
