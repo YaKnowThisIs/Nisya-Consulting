@@ -1,3 +1,13 @@
+html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -11,12 +21,11 @@ header {
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    position: fixed;
     line-height: 0.1em;
     padding: 0.3em 1em;
     z-index: 1000;
 }
- 
+
 header .logo img {
     width: 20vw;
     height: auto;
@@ -53,12 +62,24 @@ header .logo img {
   font-size: 1.1em;
   padding: 0.5em 1em;
   white-space: nowrap;
-  border-radius: 5px;
+  border-radius: 50px;
   transition: background-color 0.3s ease;
 }
 
 .menu a:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* horizontal par défaut */
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 /* ---------- MENU BURGER RESPONSIVE ---------- */
@@ -71,30 +92,61 @@ header .logo img {
 
   .menu-icon:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    border-radius: 50px;
   }
-  
+
   .menu {
     display: none;
-    flex-direction: column;
-    width: 100%;
+    max-width: 500px;
     background-color: #09253D;
-    align-items: center;
+    padding: 1rem 0;
   }
 
   #menu-toggle:checked ~ .menu {
-    display: flex;
+    display: block;
   }
 
   header {
     flex-wrap: wrap;
   }
+
+  .menu ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    gap: 1rem 2rem;
+    padding: 0;
+    margin: 1rem 0;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu a {
+    display: inline-block;
+    text-align: center;
+    font-size: 0.1em;
+    line-height: 0.1;
+    padding: 0.5rem 1rem;
+    white-space: normal;
+    color: white;
+
+  }
 }
+
 
 /*_________________________________main_________________________________*/
 main {
     box-sizing: border-box;
-    margin:  0vw 20vw 0vw 20vw;
+    margin:  0vw 10vw 0vw 10vw;
     display: block;
     padding-top: 5vw;
     padding-bottom: 5vw;
@@ -127,12 +179,50 @@ section {
   text-align: justify;
 }
 
-/* Texte en colonnes sur grands écrans */
-@media (min-width: 900px) {
-  section p {
+@media (min-width: 1200px) {
+  .paragraphes {
     column-count: 2;
-    column-gap: 2rem;
+    column-gap: 4em;
   }
+
+  .paragraphes p {
+    break-inside: avoid;
+    margin-bottom: 0.8rem;
+  }
+
+  .paragraphes p:first-child {
+    margin-top: 0;
+  }
+}
+
+
+/* Marges laterales plus étroites sur smartphone */
+@media (max-width: 800px) {  
+  main {
+    margin: 0 5vw 0 5vw;
+  }
+
+  header .logo {
+    width: 40vw;
+    min-width: 150px;
+    margin:auto;
+  }
+}
+
+#backToTop {
+  display: block;
+  text-align: right;
+  background-color: #42C5A5;
+  color: white;
+  padding: 0.1em 1em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 2rem;
+  margin-left: auto; /* pour le caler à droite dans un conteneur bloc */
+  width: fit-content;
+  opacity: 0.9;
 }
 
 /*_________________________________footer_________________________________*/
